@@ -13,6 +13,16 @@
   <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
   <!-- Custom styles for this template-->
   <link href="css/sb-admin-2.min.css" rel="stylesheet">
+  <script>
+    function rewardOptions() {
+      var x = document.getElementById("rewardOptions");
+      if (x.style.display === "none") {
+        x.style.display = "flex";
+      } else {
+        x.style.display = "none";
+      }
+    }
+  </script>
 </head>
 
 <body id="page-top">
@@ -21,23 +31,29 @@
     <!-- Sidebar -->
     <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
       <!-- Sidebar - Brand -->
-      <a class="sidebar-brand d-flex " href="citizenResponders.html">
+      <a class="sidebar-brand d-flex " href="admin.html">
         <div class="sidebar-brand-icon rotate-n-15"> <i class="fas fa-exclamation-triangle"></i></div>
         <div class="sidebar-brand-text mx-3" style="margin-left: 0rem!important;margin-right: 2rem!important;">Citizen In-Touch</div>
       </a>
       <br><!-- Divider -->
       <hr class="sidebar-divider my-0">
       <!-- Nav Item - Dashboard -->
-      <li class="nav-item active"> <a class="nav-link" href="citizenResponders.html"> <i class="fas fa-fw fa-tachometer-alt"></i> <span>Report An Incident</span></a>
+      <li class="nav-item active"> <a class="nav-link" href="./citizenResponders.html"> <i class="fas fa-fw fa-tachometer-alt"></i> <span>Report An Incident</span></a>
       </li>
 
-
-
+      <!-- Divider -->
       <hr class="sidebar-divider">
+
+      <!-- Heading -->
+
+
+      <!-- Nav Item - Pages Collapse Menu -->
+
+
+
 
       <li class="nav-item active"> <a class="nav-link" href="citizenRespondersTable.html"> <i class="fas fa-fw fa-clipboard-list"></i> <span>Issues</span></a>
       </li>
-
       <hr class="sidebar-divider">
 
       <li class="nav-item active"> <a class="nav-link" href="citizenRespondersRewards.html"> <i class="fas fa-fw fa-dollar-sign"></i> <span>Rewards</span></a>
@@ -90,6 +106,9 @@
             <!-- Nav Item - Alerts -->
 
             <!-- Nav Item - Messages -->
+
+            <div class="topbar-divider d-none d-sm-block"></div>
+            <!-- Nav Item - User Information -->
             <div style="padding-top: 20px;">
               <form>
                 <select>
@@ -123,39 +142,91 @@
         <div class="container-fluid">
           <!-- Page Heading -->
           <div class="d-sm-flex align-items-center justify-content-between mb-4">
-            <h1 class="h3 mb-0 text-gray-800">Report Incident</h1>
-
+            <h1 class="h3 mb-0 text-gray-800">Redeem Rewards</h1>
+            <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-download fa-sm text-white-50"></i> Generate
+              Report</a>
           </div>
           <!-- Content Row -->
-          <!-- Content Row -->
-          <!-- Content Row -->
           <div class="row">
-            <div class="col-lg-9">
-              <div class="p-5">
-                <div class="text-center">
-                  <h1 class="h4 text-gray-900 mb-2"></h1>
+            <!-- Earnings (Monthly) Card Example -->
+            <div class="col-xl-3 col-md-6 mb-4">
+              <div class="card border-left-primary shadow h-100 py-2">
+                <div class="card-body">
+                  <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                      <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Rewards Points
+                        Earned</div>
+                      <div class="h5 mb-0 font-weight-bold text-gray-800">400</div>
+                    </div>
+                    <div class="col-auto"> <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
+                    </div>
+                  </div>
                 </div>
-                <form class="user">
-                  <div class="form-group"> <label for="Description">Incident
-                      Description</label> <textarea class="form-control" id="exampleFormControlTextarea1" rows="3">Bushfire spotted in East Gippsland Buchan town.Fire Danger Rating is VERY HIGH</textarea>
+                <div style="margin-left: 150px;">
+                  <a onclick="rewardOptions()" href="#">Redeem -></a>
+                </div>
+              </div>
+            </div>
+            <!-- Earnings (Monthly) Card Example -->
+
+            <!-- Pending Requests Card Example -->
+          </div>
+          <!-- Content Row -->
+          <div class="row" id="rewardOptions" style="display: none;">
+            <!-- Area Chart -->
+
+            <!-- Pie Chart -->
+            <div class="col-xl-4 col-lg-5">
+              <div class="card shadow mb-4">
+                <!-- Card Header - Dropdown -->
+                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                  <h6 class="m-0 font-weight-bold text-primary">Select</h6>
+                  <div class="dropdown no-arrow"> <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="dropdownMenuLink">
+                      <div class="dropdown-header">Dropdown Header:</div>
+                      <a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a>
+                      <div class="dropdown-divider"></div>
+                      <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
                   </div>
-                  <div class="form-group"> <label for="Description">Category</label>
-                    <select class="custom-select">
-                      <option selected="selected">Open this select menu</option>
-                      <option value="1">Bush Fires</option>
-                      <option value="2">Covid Emergency</option>
-                      <option value="3">Road Works</option>
-                      <option value="3">Metro Planned Disruptions</option>
-                    </select>
+                </div>
+                <!-- Card Body -->
+                <div class="card-body">
+                  <div style="margin-left: 50px;">
+                    <img src="./img/mcd.JPG">
                   </div>
-                  <div class="form-group"> <label for="Description">Suburb</label>
-                    <textarea class="form-control" disabled id="exampleFormControlTextarea1" rows="1">Buchan</textarea> </div>
-                  <a id="sendNotification" href="#" class="btn btn-primary btn-user btn-block" onclick="sendNotification()"> Report Issue </a>
-                </form>
-                <hr>
+                  <div class="mt-4 text-center small"> Redeem Your Points For Free McD Coupons </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-4 col-lg-5">
+              <div class="card shadow mb-4">
+                <!-- Card Header - Dropdown -->
+                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                  <h6 class="m-0 font-weight-bold text-primary">Select</h6>
+                  <div class="dropdown no-arrow"> <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="dropdownMenuLink">
+                      <div class="dropdown-header">Dropdown Header:</div>
+                      <a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a>
+                      <div class="dropdown-divider"></div>
+                      <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                  </div>
+                </div>
+                <!-- Card Body -->
+                <div class="card-body">
+                  <div style="margin-left: 50px;">
+                    <img src="./img/kfc.JPG" width="200px" height="320px">
+                  </div>
+                  <div class="mt-4 text-center small"> Redeem Your Points For Free KFC Coupons </div>
+                </div>
               </div>
             </div>
           </div>
+          <!-- Content Row -->
+
         </div>
         <!-- /.container-fluid -->
       </div>
