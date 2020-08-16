@@ -46,6 +46,7 @@ $.ajax(settings).done(function (response) {
 });
 
 
+Send SMS: 
 var settings = {
   "url": "https://tapi.telstra.com/v2/messages/sms",
   "method": "POST",
