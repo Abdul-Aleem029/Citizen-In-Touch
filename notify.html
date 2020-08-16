@@ -16,7 +16,40 @@
   <link href="css/sb-admin-2.min.css" rel="stylesheet">
   <script>
     function sendNotification() {
-      alert("Group Notified !!!");
+
+      var settings = {
+        "url": "https://tapi.telstra.com/v2/oauth/token",
+        "method": "POST",
+        "timeout": 0,
+        "headers": {
+          "Content-Type": "application/x-www-form-urlencoded"
+        },
+        "data": {
+          "client_id": "axiU02KdttjHst6kKR2vYaFxg8pgcbi1",
+          "client_secret": "pUuIzk41OrAoNcjV",
+          "grant_type": "client_credentials",
+          "scope": "NSMS"
+        }
+      };
+
+      $.ajax(settings).done(function (response) {
+        let access_token = response.access_token;
+        console.log(access_token);
+        var sms = {
+          "url": "https://tapi.telstra.com/v2/messages/sms",
+          "method": "POST",
+          "timeout": 0,
+          "headers": {
+            "Authorization": "Bearer " + access_token,
+            "Content-Type": "application/json"
+          },
+          "data": JSON.stringify({ "to": "0432936794", "validity": "10", "body": "Test Message", "from": "Test Message" }),
+        };
+
+        $.ajax(sms).done(function (smsResponse) {
+          console.log(smsResponse);
+        });
+      });
     }
 
   </script>
